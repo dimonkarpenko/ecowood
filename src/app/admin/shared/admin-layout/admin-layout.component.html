@@ -1,0 +1,31 @@
+<div class="logo_container">
+    <h2>Eco Wood</h2>
+</div>
+
+<div class="main_cont">
+    <div class="scontainer">
+        <nav class="snavbar">
+            <div class="admin_menu_container">
+                    <ul *ngIf="auth.isAuth();else login">
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'dashboard']" >Dashboard</a></li>
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-slider']" >Slider</a></li>
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-services']">Add Services</a></li>
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-products']">Add Products</a></li>
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-article']">Add Article</a></li>
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-contact-info']">Add Contacts</a></li>
+                        <li> <a href="#" (click)="logout($event)">Logout</a></li>
+                    </ul>
+            </div>
+
+            <ng-template #login>
+                    <ul>
+                        <li routerLinkActive="active-link"><a [routerLink]="['/admin', 'login']"  >LogIn</a></li>
+                    </ul>
+            </ng-template>
+        </nav>
+    </div>
+    
+    <div class="rout_cont">
+        <router-outlet></router-outlet>
+    </div>
+</div>

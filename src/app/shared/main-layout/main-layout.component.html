@@ -1,0 +1,57 @@
+<nav class="snavbar">
+    <div class="logo_container">
+        <h2>Eco Wood</h2>
+    </div>
+
+    <div class="hamburger" (click)="toggleCards()">
+        <div class="hamburger_menu"></div>
+        <div class="hamburger_menu"></div>
+        <div class="hamburger_menu"></div>
+    </div>
+
+    <div class="menu_container">
+            <ul>
+                <li>
+                    <a [routerLink]="['/']" >Home</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/products']" routerLinkActive="active-link" >Products</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/services']" routerLinkActive="active-link" >Services</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/blog']" routerLinkActive="active-link" >Blog</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/contacts']" routerLinkActive="active-link" >Contacts</a>
+                </li>
+            </ul>
+    </div>
+    
+    <div class="menu_container_mobile" *ngIf="toggle">
+        <div class="hamburger_close_btn" (click)="toggleCards()">
+            <div class="hamburger_menu_close_btn"></div>
+            <div class="hamburger_menu_close_btn_sec"></div>
+        </div>
+            <ul>
+                <li>
+                    <a [routerLink]="['/']" >Home</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/products']" routerLinkActive="active-link" >Products</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/services']" routerLinkActive="active-link" >Services</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/blog']" routerLinkActive="active-link" >Blog</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/contacts']" routerLinkActive="active-link" >Contacts</a>
+                </li>
+            </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+<ngb-carousel *ngIf="sliderImg$ | async as sliderImgs">
+    <ng-template ngbSlide *ngFor="let sliderImg of sliderImgs">
+      <div class="picsum-img-wrapper">
+        <quill-view-html [content]="sliderImg.photo"></quill-view-html>
+      </div>
+      <div class="carousel-caption">
+        <h3>
+          {{ sliderImg.title }}
+        </h3>
+        <h5 class="text-center">
+          {{ sliderImg.description }}
+        </h5>
+      </div>
+    </ng-template>
+  </ngb-carousel>
