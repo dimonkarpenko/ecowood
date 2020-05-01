@@ -1,1 +1,11 @@
 <app-image-slider></app-image-slider>
+<div class="srv-container" *ngIf="servInfo$ | async as servInfo">
+    <div class="services-container" *ngFor="let servInfos of servInfo">
+            <figure>
+                <quill-view-html [content]="servInfos.img" class="quillImg"></quill-view-html>
+            </figure>
+            <figcaption>
+                {{servInfos.desc}}
+            </figcaption>
+    </div>
+</div>

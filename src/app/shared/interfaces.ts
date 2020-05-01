@@ -5,3 +5,7 @@ export class FbResponse {
 export class fbResImg {
     name: string
 }
+
+export class fbServ {
+    name: string
+}

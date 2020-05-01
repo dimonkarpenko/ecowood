@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from '../shared/services.service';
 
 @Component({
   selector: 'app-main-page',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  servInfo$
 
   constructor(
+    public servicesServ: ServicesService
   ) { }
 
   ngOnInit(): void {
+    this.servInfo$ = this.servicesServ.getAllServices()
   }
 
 }

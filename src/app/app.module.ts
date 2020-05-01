@@ -29,7 +29,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ImageSliderComponent,
   ],
   imports: [
-    QuillModule.forRoot(),
+    QuillModule.forRoot({
+      modules: {
+        clipboard: {
+          matchVisual: false
+        }
+      }
+    }),
     BrowserModule,
     AppRoutingModule,
     FormsModule,

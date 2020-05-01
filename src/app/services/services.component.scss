@@ -1,0 +1,21 @@
+.banner-services {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    background-color: #66ab36;
+    text-align: center;
+
+    h1 {
+        color: #fff;
+        font-size: 56px;
+    }
+}
+
+.serv-container-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: row-reverse;
+}

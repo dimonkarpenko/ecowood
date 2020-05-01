@@ -1,2 +1,17 @@
-<app-main-layout></app-main-layout>
-<div>test</div>
+<div class="serv-container">
+    <div class="banner-services">
+        <h1>Services</h1>
+    </div>
+
+    <div class="serv-container-wrap" *ngIf="servInfo$ | async as servInfo">
+        <div class="services-container" *ngFor="let servInfos of servInfo">
+            <figure>
+                <quill-view-html [content]="servInfos.img" class="quillImg"></quill-view-html>
+            </figure>
+            <figcaption>
+                <quill-view-html [content]="servInfos.info"></quill-view-html>
+            </figcaption>
+            <a href="#">Узнать больше</a>
+        </div>
+    </div>
+</div>
