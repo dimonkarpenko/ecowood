@@ -4,14 +4,47 @@
     </div>
 
     <div class="serv-container-wrap" *ngIf="servInfo$ | async as servInfo">
-        <div class="services-container" *ngFor="let servInfos of servInfo">
-            <figure>
-                <quill-view-html [content]="servInfos.img" class="quillImg"></quill-view-html>
-            </figure>
-            <figcaption>
-                <quill-view-html [content]="servInfos.info"></quill-view-html>
-            </figcaption>
-            <a href="#">Узнать больше</a>
+        <div *ngFor="let servInfos of servInfo; let i = index">
+            <div class="services-container" *ngIf="i % 2 != 0; else odd">
+                <div class="service-container-img">
+                    <figure>
+                        <quill-view-html [content]="servInfos.img"></quill-view-html>
+                    </figure>
+                </div>
+                <div class="services-container-wrap">
+                    <div class="container">
+                        <h4>
+                            {{ servInfos.desc }}
+                        </h4>
+                        <div class="services-container-content">
+                            <quill-view-html [content]="servInfos.info" class="serv-info"></quill-view-html>
+                        </div>
+                        <a href="#" class="serv-btn">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <ng-template #odd>
+                <div class="services-container-rev">
+                    <div class="service-container-img">
+                        <figure>
+                            <quill-view-html [content]="servInfos.img"></quill-view-html>
+                        </figure>
+                    </div>
+                    <div class="services-container-wrap-rev">
+                        <div class="container-rev">
+                            <h4>
+                                {{ servInfos.desc }}
+                            </h4>
+                            <div class="services-container-content">
+                                <quill-view-html [content]="servInfos.info" class="serv-info-rev"></quill-view-html>
+                            </div>
+                            <a href="#" class="serv-btn">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+
         </div>
     </div>
 </div>

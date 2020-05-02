@@ -206,7 +206,35 @@ table th {
 }
 
 .ql-editor {
-  padding: 12px 0 0 0;
+  padding: 0;
+}
+
+.serv-info {
+  .ql-editor {
+      p {
+        font-size: 17px;
+        letter-spacing: 0.4px;
+        line-height: 1.4;
+        text-align: end;
+        color: #989797;
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+  }
+}
+
+.serv-info-rev {
+  .ql-editor {
+      p {
+        font-size: 17px;
+        letter-spacing: 0.4px;
+        line-height: 1.4;
+        text-align: left;
+        color: #989797;
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+  }
 }
 
 .carousel {
