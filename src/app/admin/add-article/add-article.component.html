@@ -1,1 +1,25 @@
-<p>add-article works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <h2 class="text-center">Add product</h2>
+  
+    <div class="form-group">
+      <label for="title">Заглавие</label>
+      <input id="title" type="title" formControlName="title">
+      <div *ngIf="form.get('title').touched && form.get('title').invalid" class="validation">
+        <small *ngIf="form.get('title').errors.required">Enter product name</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="photo">Изображение</label>
+      <quill-editor formControlName="photo"></quill-editor>
+    </div>
+    <div class="form-group">
+      <label for="info">Текст</label>
+      <quill-editor formControlName="info"></quill-editor>
+    </div>
+    <div class="form-group">
+      <label for="descShort">Краткое описание</label>
+      <quill-editor formControlName="descShort"></quill-editor>
+    </div>
+  
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submitted">Добавить статью</button>
+  </form>

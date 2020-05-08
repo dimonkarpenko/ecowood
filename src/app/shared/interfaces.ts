@@ -9,3 +9,18 @@ export class fbResImg {
 export class fbServ {
     name: string
 }
+
+export class fbBlog {
+    name: string
+}
+
+export interface Product {
+    type?: string,
+    id?: string,
+    title?: string,
+    photo?: string,
+    info?: string,
+    descShort?: string,
+    price?: string,
+    date?: Date
+}

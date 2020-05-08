@@ -15,6 +15,10 @@ import { QuillModule } from 'ngx-quill';
 import { AuthInterceptor } from './shared/auth.interceptor';
 import { ImageSliderComponent } from './image-slider/image-slider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/footer.component';
+import { ProductPageComponent } from './product-page/product-page.component';
+import { ServicePageComponent } from './service-page/service-page.component';
+import { ArticlePageComponent } from './article-page/article-page.component';
 
 
 @NgModule({
@@ -27,6 +31,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BlogPageComponent,
     ContactsComponent,
     ImageSliderComponent,
+    FooterComponent,
+    ProductPageComponent,
+    ServicePageComponent,
+    ArticlePageComponent,
   ],
   imports: [
     QuillModule.forRoot({

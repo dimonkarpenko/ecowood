@@ -1,1 +1,28 @@
-<div>test</div>
+<div class="prod-container">
+    <div class="banner">
+        <h1>Products</h1>
+    </div>
+
+    <div *ngIf="products$ | async as product">
+        <div class="product-container" *ngFor="let products of product">
+            <div class="product-container-img">
+                <figure>
+                    <quill-view-html [content]="products.photo"></quill-view-html>
+                </figure>
+            </div>
+            <div class="product-container-info">
+                <h1>
+                    {{products.title}}
+                </h1>
+                <quill-view-html [content]="products.info"></quill-view-html>
+                <div class="product-container-price">
+                    <span>Price:</span>
+                    <h3>{{products.price}} $</h3>
+                </div>
+                <button [routerLink]="['/products', products.id]" routerLinkActive="router-link-active"  class="btn btn-more">
+                    Узнать больше
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,11 +1,29 @@
 <app-image-slider></app-image-slider>
 <div class="srv-container" *ngIf="servInfo$ | async as servInfo">
     <div class="services-container" *ngFor="let servInfos of servInfo">
+        <!-- <a [routerLink]="['/services', service.id]" routerLinkActive="router-link-active" > -->
             <figure>
                 <quill-view-html [content]="servInfos.img" class="quillImg"></quill-view-html>
             </figure>
             <figcaption>
                 {{servInfos.desc}}
             </figcaption>
+        <!-- </a> -->
+    </div>
+</div>
+<div class="container prod" *ngIf="products$ | async as products">
+    <div class="prod-container-main" *ngFor="let product of products">
+        <!-- <a [routerLink]="['/products', product.id]" routerLinkActive="router-link-active" > -->
+            <figure>
+                <quill-view-html [content]=product.photo></quill-view-html>
+            </figure>
+            <h4>
+                {{product.title}}
+            </h4>
+            <quill-view-html [content]="product.descShort"></quill-view-html>
+            <div>
+                {{product.price}} $
+            </div>
+        <!-- </a> -->
     </div>
 </div>

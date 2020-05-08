@@ -237,6 +237,20 @@ table th {
   }
 }
 
+.product-container-info {
+    .ql-editor {
+      p {
+        font-size: 17px;
+        letter-spacing: 0.4px;
+        line-height: 1.4;
+        text-align: left;
+        color: #989797;
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+  }
+}
+
 .carousel {
   z-index: 0;
   outline: none;
@@ -244,6 +258,18 @@ table th {
 
 figure {
   margin: 0 !important;
+}
+
+.banner {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background-color: #66ab36;
+  text-align: center;
+
+  h1 {
+      color: #fff;
+      font-size: 56px;
+  }
 }
 
 

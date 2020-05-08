@@ -1,1 +1,19 @@
-<div>test</div>
+<div class="blog-container">
+    <div class="banner">
+        <h1>Блог</h1>
+    </div>
+
+    <div class="container bl" *ngIf="article$ | async as articles">
+        <div class="blog-container-main" *ngFor="let article of articles">
+            <figure>
+                <quill-view-html [content]=article.photo></quill-view-html>
+            </figure>
+            <h4>
+                {{article.title}}
+            </h4>
+            <quill-view-html [content]="article.descShort"></quill-view-html>
+            <!-- <button [routerLink]="['/blog', article.id]" class="btn btn-dark">Читать статью</button> -->
+        </div>
+    </div>
+
+</div>

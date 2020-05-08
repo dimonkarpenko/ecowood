@@ -23,6 +23,7 @@ export class AddProductsComponent implements OnInit {
       title: new FormControl(null, Validators.required),
       photo: new FormControl(null, Validators.required),
       info: new FormControl(null, Validators.required),
+      descShort: new FormControl(null, Validators.required),
       price: new FormControl(null, Validators.required)
     })
   }
@@ -39,6 +40,7 @@ export class AddProductsComponent implements OnInit {
       photo: this.form.value.photo,
       info: this.form.value.info,
       price: this.form.value.price,
+      descShort: this.form.value.descShort,
       date: new Date()
     }
 

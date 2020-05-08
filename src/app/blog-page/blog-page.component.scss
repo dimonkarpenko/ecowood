@@ -1,0 +1,20 @@
+
+.bl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.blog-container-main {
+    flex-wrap: wrap;
+    flex-basis: 25%;
+
+    h4 {
+        margin-bottom: 15px;
+    }
+
+    button {
+        margin-top: 15px;
+    }
+}

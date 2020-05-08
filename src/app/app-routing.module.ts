@@ -6,31 +6,23 @@ import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { ProductPageComponent } from './product-page/product-page.component';
+import { ServicePageComponent } from './service-page/service-page.component';
+import { ArticlePageComponent } from './article-page/article-page.component';
 
 
 const routes: Routes = [
   {
     path: '', component: MainLayoutComponent, children: [
-      {path: '', redirectTo: '/', pathMatch: 'full'},
-      {path: '', component: MainPageComponent},
-      {
-        path: 'products', component: ProductsComponent, children: [
-          {path: 'product/:id', component: ProductsComponent}
-        ]
-      },
-      {
-        path: 'services', component: ServicesComponent, children: [
-          { path: 'services/:id', component: ServicesComponent }
-        ]
-      },
-      {
-        path: 'blog', component: BlogPageComponent, children: [
-          { path: 'blog/:id', component: BlogPageComponent }
-        ]
-      },
-      {
-        path: 'contacts', component: ContactsComponent
-      },
+      { path: '', redirectTo: '/', pathMatch: 'full'},
+      { path: '', component: MainPageComponent},
+      { path: 'products', component: ProductsComponent},
+      { path: 'products/:id', component: ProductPageComponent},
+      { path: 'services', component: ServicesComponent },
+      { path: 'service/:id', component: ServicePageComponent },
+      { path: 'blog', component: BlogPageComponent },
+      { path: 'article/:id', component: ArticlePageComponent },
+      {path: 'contacts', component: ContactsComponent},
     ]
   },
   {

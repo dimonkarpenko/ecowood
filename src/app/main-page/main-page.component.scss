@@ -39,7 +39,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: absolute;
     align-items: center;
     width: 100%;
+}
+
+.prod {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.prod-container-main {
+    flex-wrap: wrap;
+    flex-basis: 25%;
 }
