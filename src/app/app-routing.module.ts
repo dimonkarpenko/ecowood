@@ -19,10 +19,10 @@ const routes: Routes = [
       { path: 'products', component: ProductsComponent},
       { path: 'products/:id', component: ProductPageComponent},
       { path: 'services', component: ServicesComponent },
-      { path: 'service/:id', component: ServicePageComponent },
+      { path: 'services/:id', component: ServicePageComponent },
       { path: 'blog', component: BlogPageComponent },
       { path: 'article/:id', component: ArticlePageComponent },
-      {path: 'contacts', component: ContactsComponent},
+      { path: 'contacts', component: ContactsComponent},
     ]
   },
   {

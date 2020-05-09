@@ -3,23 +3,23 @@
         <h1>Services</h1>
     </div>
 
-    <div class="serv-container-wrap" *ngIf="servInfo$ | async as servInfo">
-        <div *ngFor="let servInfos of servInfo; let i = index">
+    <div class="serv-container-wrap" *ngIf="servInfo$ | async as services">
+        <div *ngFor="let services of services; let i = index">
             <div class="services-container" *ngIf="i % 2 != 0; else odd">
                 <div class="service-container-img">
                     <figure>
-                        <quill-view-html [content]="servInfos.img"></quill-view-html>
+                        <quill-view-html [content]="services.img"></quill-view-html>
                     </figure>
                 </div>
                 <div class="services-container-wrap">
                     <div class="container">
                         <h4>
-                            {{ servInfos.desc }}
+                            {{ services.desc }}
                         </h4>
                         <div class="services-container-content">
-                            <quill-view-html [content]="servInfos.info" class="serv-info"></quill-view-html>
+                            <quill-view-html [content]="services.info" class="serv-info"></quill-view-html>
                         </div>
-                        <button class="serv-btn">Узнать больше</button>
+                        <button [routerLink]="['/services', services.id]" routerLinkActive="router-link-active"  class="serv-btn">Узнать больше</button>
                     </div>
                 </div>
             </div>
@@ -28,18 +28,18 @@
                 <div class="services-container-rev">
                     <div class="service-container-img">
                         <figure>
-                            <quill-view-html [content]="servInfos.img"></quill-view-html>
+                            <quill-view-html [content]="services.img"></quill-view-html>
                         </figure>
                     </div>
                     <div class="services-container-wrap-rev">
                         <div class="container-rev">
                             <h4>
-                                {{ servInfos.desc }}
+                                {{ services.desc }}
                             </h4>
                             <div class="services-container-content">
-                                <quill-view-html [content]="servInfos.info" class="serv-info-rev"></quill-view-html>
+                                <quill-view-html [content]="services.info" class="serv-info-rev"></quill-view-html>
                             </div>
-                            <button class="serv-btn">Узнать больше</button>
+                            <button [routerLink]="['/services', services.id]" routerLinkActive="router-link-active" class="serv-btn">Узнать больше</button>
                         </div>
                     </div>
                 </div>

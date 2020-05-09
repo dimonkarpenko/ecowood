@@ -38,7 +38,6 @@ export class AddArticleComponent implements OnInit {
       title: this.form.value.title,
       photo: this.form.value.photo,
       info: this.form.value.info,
-      price: this.form.value.price,
       descShort: this.form.value.descShort,
       date: new Date()
     }

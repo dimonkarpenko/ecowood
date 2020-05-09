@@ -15,7 +15,6 @@ export class fbBlog {
 }
 
 export interface Product {
-    type?: string,
     id?: string,
     title?: string,
     photo?: string,
@@ -23,4 +22,21 @@ export interface Product {
     descShort?: string,
     price?: string,
     date?: Date
+}
+
+export interface Service {
+    id?: string,
+    desc?: string,
+    img?: string,
+    info?: string,
+    date?: Date
+}
+
+export interface Article {
+    id?: string,
+    title?: string,
+    photo?: string,
+    info?: string,
+    descShort?: string,
+    date?: Date 
 }

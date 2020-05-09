@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { fbBlog } from './interfaces';
+import { fbBlog, Article } from './interfaces';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -34,5 +34,16 @@ export class BlogService {
           }))
         }))
       )
+  }
+
+  getById(id) {
+    return this.http.get(`${environment.fbDbUrl}/articles/${id}.json`)
+    .pipe( map ( (res : Article) => {
+      return {
+        ...res,
+        id,
+        date: new Date(res.date)
+      }
+    }))
   }
 }
