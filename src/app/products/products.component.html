@@ -3,8 +3,36 @@
         <h1>Products</h1>
     </div>
 
+    <div class="filter">
+        <ul>
+            <li>
+                <a (click)="setType('spoon')">Ложки</a>
+            </li>
+            <li>
+                <a (click)="setType('fork')">
+                    Вилки
+                </a>
+            </li>
+            <li>
+                <a (click)="setType('plate')">
+                    Тарелки
+                </a>
+            </li>
+            <li>
+                <a (click)="setType('knife')">
+                    Ножи
+                </a>
+            </li>
+            <li>
+                <a (click)="setType('stick')">
+                    Палочки
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <div *ngIf="products$ | async as product">
-        <div class="product-container" *ngFor="let products of product">
+        <div class="product-container" *ngFor="let products of product | sorting: productServ.type">
             <div class="product-container-img">
                 <figure>
                     <quill-view-html [content]="products.photo"></quill-view-html>

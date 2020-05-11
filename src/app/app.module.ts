@@ -18,7 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ServicePageComponent } from './service-page/service-page.component';
-import { ArticlePageComponent } from './article-page/article-page.component';
+import { ArticleComponent } from './article/article.component';
+import { SortingPipe } from './shared/sorting.pipe';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ArticlePageComponent } from './article-page/article-page.component';
     FooterComponent,
     ProductPageComponent,
     ServicePageComponent,
-    ArticlePageComponent,
+    ArticleComponent,
+    SortingPipe
   ],
   imports: [
     QuillModule.forRoot({

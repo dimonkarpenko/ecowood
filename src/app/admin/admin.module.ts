@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AuthGuard } from '../shared/auth.guard';
 import { QuillModule } from 'ngx-quill';
 import { SliderComponent } from './slider/slider.component'
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SliderComponent } from './slider/slider.component'
         AddArticleComponent,
         AddContactInfoComponent,
         DashboardComponent,
-        SliderComponent
+        SliderComponent,
+        EditProductComponent
     ],
     imports: [
         QuillModule.forRoot(),
@@ -39,6 +41,7 @@ import { SliderComponent } from './slider/slider.component'
                     { path: 'add-slider', component: SliderComponent, canActivate: [AuthGuard]},
                     { path: 'add-services', component: AddServicesComponent,canActivate: [AuthGuard] },
                     { path: 'add-products', component: AddProductsComponent, canActivate: [AuthGuard] },
+                    { path: 'add-products/:id/edit', component: EditProductComponent, canActivate: [AuthGuard] },
                     { path: 'add-article', component: AddArticleComponent, canActivate: [AuthGuard] },
                     { path: 'add-contact-info', component: AddContactInfoComponent, canActivate: [AuthGuard] }
                 ]

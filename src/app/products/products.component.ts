@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../shared/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -10,12 +11,27 @@ export class ProductsComponent implements OnInit {
 
   products$
 
+  type = ''
+
   constructor(
-    public productServ: ProductService
+    public productServ: ProductService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.products$ = this.productServ.getAll()
+  }
+
+  setType(type) {
+    this.type = type
+
+      this.router.navigate(['/products']), {
+        queryParams: {
+          type: this.type
+        }
+    }
+
+    this.productServ.setType(this.type)
   }
 
 }

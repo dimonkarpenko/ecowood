@@ -414,3 +414,27 @@
 		-moz-transform: rotate(900deg);
 	}
 }
+
+.contacts-info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+
+    figure {
+        max-width: 50%;
+    }
+}
+
+.contacts-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #008653;
+
+    input {
+        margin: 10px 0;
+        width: 60%;
+    }
+}

@@ -12,7 +12,7 @@
     <div class="menu_container">
             <ul>
                 <li>
-                    <a [routerLink]="['/']" >Home</a>
+                    <a [routerLink]="['/']"  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
                 </li>
                 <li>
                     <a [routerLink]="['/products']" routerLinkActive="active-link" >Products</a>
@@ -20,9 +20,9 @@
                 <li>
                     <a [routerLink]="['/services']" routerLinkActive="active-link" >Services</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a [routerLink]="['/blog']" routerLinkActive="active-link" >Blog</a>
-                </li>
+                </li> -->
                 <li>
                     <a [routerLink]="['/contacts']" routerLinkActive="active-link" >Contacts</a>
                 </li>
@@ -44,9 +44,9 @@
                 <li>
                     <a [routerLink]="['/services']" routerLinkActive="active-link" >Services</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a [routerLink]="['/blog']" routerLinkActive="active-link" >Blog</a>
-                </li>
+                </li> -->
                 <li>
                     <a [routerLink]="['/contacts']" routerLinkActive="active-link" >Contacts</a>
                 </li>

@@ -8,7 +8,7 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ServicePageComponent } from './service-page/service-page.component';
-import { ArticlePageComponent } from './article-page/article-page.component';
+import { ArticleComponent } from './article/article.component';
 
 
 const routes: Routes = [
@@ -21,7 +21,7 @@ const routes: Routes = [
       { path: 'services', component: ServicesComponent },
       { path: 'services/:id', component: ServicePageComponent },
       { path: 'blog', component: BlogPageComponent },
-      { path: 'article/:id', component: ArticlePageComponent },
+      { path: 'articles/:id', component: ArticleComponent },
       { path: 'contacts', component: ContactsComponent},
     ]
   },

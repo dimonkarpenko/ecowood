@@ -1,22 +1,18 @@
 <div *ngIf="servInfo$ | async as services; else loading">
-    <div class="product">
-        <div class="header right">
+    <div class="service">
+        <div class="service-back-btn">
             <button class="btn btn-dark" [routerLink]="['/services']" routerLinkActive="router-link-active" >Back</button>
         </div>
-        <div class="flex">
-            <div class="item text-center">
-                <h2>
-                    {{services.desc}}
-                </h2>
-                <div >
-                    <quill-view-html [content]="services.img"></quill-view-html>
-                </div>
-
-                <div class="flex-center">
-                    <quill-view-html [content]="services.info"></quill-view-html>
-                </div>
+        <div class="service-card">
+            <h2>
+                {{services.desc}}
+            </h2>
+            <div >
+                <quill-view-html [content]="services.img"></quill-view-html>
             </div>
-
+        </div>
+        <div class="item"> 
+                <quill-view-html [content]="services.info"></quill-view-html>
         </div>
     </div>
 </div>

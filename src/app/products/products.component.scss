@@ -41,3 +41,32 @@
         cursor: pointer;
     }
 }
+
+.filter {
+    background-color: #f0bc00;
+    
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        li {
+            margin: 0 15px;
+            padding: 15px;
+            list-style-type: none;
+            font-size: 20px;
+            font-weight: 600;
+            transition: .3s ease all;
+            cursor: pointer;
+
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background-color: rgba(12, 182, 35, 0.4);
+            }
+        }
+    }
+}

@@ -3,16 +3,18 @@
         <h1>Блог</h1>
     </div>
 
-    <div class="container bl" *ngIf="article$ | async as articles">
-        <div class="blog-container-main" *ngFor="let article of articles">
+    <div class="container bl" *ngIf="article$ | async as article">
+        <div class="blog-container-main" *ngFor="let articles of article">
             <figure>
-                <quill-view-html [content]=article.photo></quill-view-html>
+                <quill-view-html [content]=articles.photo></quill-view-html>
             </figure>
             <h4>
-                {{article.title}}
+                {{articles.title}}
             </h4>
-            <quill-view-html [content]="article.descShort"></quill-view-html>
-            <button [routerLink]="['/blog', article.id]" routerLinkActive="router-link-active" class="btn btn-dark">Читать статью</button>
+            <quill-view-html [content]="articles.descShort"></quill-view-html>
+            <button [routerLink]="['/blog', articles.id]" routerLinkActive="router-link-active"  class="btn btn-more">
+                Узнать больше
+            </button>
         </div>
     </div>
 

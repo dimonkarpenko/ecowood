@@ -4,23 +4,23 @@ import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-article-page',
-  templateUrl: './article-page.component.html',
-  styleUrls: ['./article-page.component.scss']
+  selector: 'app-article',
+  templateUrl: './article.component.html',
+  styleUrls: ['./article.component.scss']
 })
-export class ArticlePageComponent implements OnInit {
+export class ArticleComponent implements OnInit {
 
   article$
 
   constructor(
-    private blogService: BlogService,
+    private blogServ: BlogService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.article$ = this.route.params
+    this.article$ = this.route.paramMap
     .pipe( switchMap(params => {
-      return this.blogService.getById(params['id'])
+      return this.blogServ.getById(params['id'])
     }))
   }
 

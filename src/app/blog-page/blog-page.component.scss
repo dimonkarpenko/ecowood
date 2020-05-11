@@ -4,6 +4,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-end;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .blog-container-main {
@@ -16,5 +18,20 @@
 
     button {
         margin-top: 15px;
+    }
+}
+
+.btn-more {
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #f0bc00;
+    transition: 0.3s ease all;
+    color: #fff;
+    margin-top: 15px;
+
+    &:hover {
+        background-color: #3a3a3a;
+        color: #fff;
+        cursor: pointer;
     }
 }

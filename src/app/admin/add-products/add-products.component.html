@@ -1,6 +1,19 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
     <h2 class="text-center">Add product</h2>
-  
+
+    <div class="form-group">
+      <label for="type">Тип товара</label>
+      <select formControlName="type">
+          <option value="spoon">Ложка</option>
+          <option value="fork">Вилка</option>
+          <option value="plate">Тарелка</option>
+          <option value="knife">Нож</option>
+          <option value="stick">Палочка</option>
+      </select>
+      <div *ngIf="form.get('type').touched && form.get('type').invalid" class="validation">
+        <small *ngIf="form.get('type').errors.required">Укажите тип товара</small>
+      </div>
+    </div>
     <div class="form-group">
       <label for="title">Title</label>
       <input id="title" type="title" formControlName="title">

@@ -15,6 +15,7 @@ export class fbBlog {
 }
 
 export interface Product {
+    type?: string,
     id?: string,
     title?: string,
     photo?: string,

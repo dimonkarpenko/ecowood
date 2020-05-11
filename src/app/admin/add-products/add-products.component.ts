@@ -20,6 +20,7 @@ export class AddProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
+      type: new FormControl(null, Validators.required),
       title: new FormControl(null, Validators.required),
       photo: new FormControl(null, Validators.required),
       info: new FormControl(null, Validators.required),
@@ -36,6 +37,7 @@ export class AddProductsComponent implements OnInit {
     this.submitted = true
 
     const product = {
+      type: this.form.value.type,
       title: this.form.value.title,
       photo: this.form.value.photo,
       info: this.form.value.info,
