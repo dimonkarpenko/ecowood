@@ -251,6 +251,84 @@ table th {
   }
 }
 
+@media (min-width: 250px) and (max-width: 530px) {
+
+  .serv-info {
+    .ql-editor {
+        p {
+          text-align: center;
+      }
+    }
+  }
+  
+  .serv-info-rev {
+    .ql-editor {
+        p {
+          text-align: center;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 530px) and (max-width: 767px) {
+
+  .serv-info {
+    .ql-editor {
+        p {
+          text-align: center;
+      }
+    }
+  }
+  
+  .serv-info-rev {
+    .ql-editor {
+        p {
+          text-align: center;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .serv-info {
+    .ql-editor {
+        p {
+          text-align: center;
+      }
+    }
+  }
+  
+  .serv-info-rev {
+    .ql-editor {
+        p {
+          text-align: center;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 991px) and (max-width: 1300px) {
+  .serv-info {
+    .ql-editor {
+        p {
+          text-align: center;
+      }
+    }
+  }
+  
+  .serv-info-rev {
+    .ql-editor {
+        p {
+          text-align: center;
+      }
+    }
+  }
+}
+
 .carousel {
   z-index: 0;
   outline: none;
@@ -270,6 +348,11 @@ figure {
       color: #fff;
       font-size: 56px;
   }
+}
+
+.active-link {
+  text-decoration: none !important;
+  color: #3a3a3a !important;
 }
 
 

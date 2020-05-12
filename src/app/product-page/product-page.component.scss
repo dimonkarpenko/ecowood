@@ -21,6 +21,24 @@
 	}
 }
 
+@media (min-width: 250px) and (max-width: 530px) {
+	.product-card {
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 530px) and (max-width: 767px) {
+	.product-card {
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.product-card {
+		flex-direction: column;
+	}
+}
+
 
 .windows8 {
 	position: relative;

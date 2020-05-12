@@ -13,6 +13,8 @@ export class ProductsComponent implements OnInit {
 
   type = ''
 
+  toggle = true
+
   constructor(
     public productServ: ProductService,
     private router: Router
@@ -32,6 +34,10 @@ export class ProductsComponent implements OnInit {
     }
 
     this.productServ.setType(this.type)
+  }
+
+  toggleCards() {
+    this.toggle = !this.toggle
   }
 
 }

@@ -1,9 +1,13 @@
 <div class="prod-container">
     <div class="banner">
-        <h1>Products</h1>
+        <h1>Продукты</h1>
     </div>
 
-    <div class="filter">
+    <div class="hamburger" (click)="toggleCards()">
+        <span>Фильтр</span>
+    </div>
+
+    <div class="filter" *ngIf="toggle">
         <ul>
             <li>
                 <a (click)="setType('spoon')">Ложки</a>

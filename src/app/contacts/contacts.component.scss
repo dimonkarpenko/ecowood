@@ -1,7 +1,8 @@
 .contacts-info {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    margin: 30px 0;
+    width: 100%;
 
     figure {
         max-width: 50%;
@@ -19,5 +20,80 @@
     input {
         margin: 10px 0;
         width: 60%;
+    }
+}
+
+@media (min-width: 250px) and (max-width: 530px) {
+    .banner {
+        h1 {
+            font-size: 35px;
+        }
+    }
+
+    .contacts-info {
+        flex-direction: column;
+
+        figure {
+            max-width: 100%;
+        }
+    }
+
+    .contacts-form {
+        width: 100%;
+        text-align: center;
+
+        .btn {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (min-width: 530px) and (max-width: 767px) {
+    .banner {
+        h1 {
+            font-size: 35px;
+        }
+    }
+
+    .contacts-info {
+        flex-direction: column;
+
+        figure {
+            max-width: 100%;
+        }
+    }
+
+    .contacts-form {
+        width: 100%;
+        text-align: center;
+
+        .btn {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner {
+        h1 {
+            font-size: 35px;
+        }
+    }
+
+    .contacts-info {
+        flex-direction: column;
+
+        figure {
+            max-width: 100%;
+        }
+    }
+
+    .contacts-form {
+        width: 100%;
+        text-align: center;
+
+        .btn {
+            margin-bottom: 15px;
+        }
     }
 }

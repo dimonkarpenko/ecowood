@@ -121,7 +121,7 @@
                 a {
                     text-decoration: none;
                     color: #ffffff;
-                    font-size: 2.875rem;
+                    font-size: 1.875rem;
                     text-transform: uppercase;
     
                         &:active {
@@ -202,7 +202,7 @@
                 a {
                     text-decoration: none;
                     color: #ffffff;
-                    font-size: 2.875rem;
+                    font-size: 1.875rem;
                     text-transform: uppercase;
     
                         &:active {
@@ -311,11 +311,6 @@
         background-color: black;
         height: 3px;
         transform: rotate(-45deg);
-    }
-
-    .active-link {
-        text-decoration: none !important;
-        color: #3a3a3a !important;
     }
 
 
