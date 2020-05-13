@@ -20,6 +20,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { ServicePageComponent } from './service-page/service-page.component';
 import { ArticleComponent } from './article/article.component';
 import { SortingPipe } from './shared/sorting.pipe';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { SortingPipe } from './shared/sorting.pipe';
     SortingPipe
   ],
   imports: [
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
     QuillModule.forRoot({
       modules: {
         clipboard: {

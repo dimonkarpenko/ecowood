@@ -3,7 +3,7 @@
         <h1>Сервисы</h1>
     </div>
 
-    <div class="serv-container-wrap" *ngIf="servInfo$ | async as services">
+    <div class="serv-container-wrap" *ngIf="servInfo$ | async as services; else loading">
         <div *ngFor="let services of services; let i = index">
             <div class="services-container" *ngIf="i % 2 != 0; else odd">
                 <div class="service-container-img">
@@ -48,3 +48,8 @@
         </div>
     </div>
 </div>
+
+
+<ng-template #loading>
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 1)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"></ngx-spinner>
+</ng-template>

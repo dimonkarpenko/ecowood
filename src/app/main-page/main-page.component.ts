@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../shared/services.service';
 import { ProductService } from '../shared/product.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-main-page',
@@ -14,10 +15,17 @@ export class MainPageComponent implements OnInit {
 
   constructor(
     public servicesServ: ServicesService,
-    public productServ: ProductService
+    public productServ: ProductService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
+    this.spinner.show()
+
+    setTimeout(() => {
+      this.spinner.hide()
+    },7000)
+
     this.servInfo$ = this.servicesServ.getAllServices()
     this.products$ = this.productServ.getAll()
   }

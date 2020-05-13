@@ -35,7 +35,7 @@
         </ul>
     </div>
 
-    <div *ngIf="products$ | async as product">
+    <div *ngIf="products$ | async as product; else loading">
         <div class="product-container" *ngFor="let products of product | sorting: productServ.type">
             <div class="product-container-img">
                 <figure>
@@ -58,3 +58,7 @@
         </div>
     </div>
 </div>
+
+<ng-template #loading>
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 1)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"></ngx-spinner>
+</ng-template>

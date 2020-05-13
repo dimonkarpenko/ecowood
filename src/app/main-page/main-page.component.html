@@ -1,5 +1,7 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 1)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"></ngx-spinner>
+
 <app-image-slider></app-image-slider>
-<div class="srv-container" *ngIf="servInfo$ | async as services; else loading">
+<div class="srv-container" *ngIf="servInfo$ | async as services">
     <div class="services-container" *ngFor="let services of services">
         <a [routerLink]="['/services', services.id]" routerLinkActive="router-link-active" >
             <figure>
@@ -42,23 +44,3 @@
         <button class="btn btn-dark">Заказать</button>
     </div>
 </div>
-
-<ng-template #loading>
-    <div class="windows8">
-        <div class="wBall" id="wBall_1">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_2">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_3">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_4">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_5">
-            <div class="wInnerBall"></div>
-        </div>
-    </div>
-</ng-template>

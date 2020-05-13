@@ -18,21 +18,5 @@
 </div>
 
 <ng-template #loading>
-    <div class="windows8">
-        <div class="wBall" id="wBall_1">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_2">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_3">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_4">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_5">
-            <div class="wInnerBall"></div>
-        </div>
-    </div>
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 1)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"></ngx-spinner>
 </ng-template>
