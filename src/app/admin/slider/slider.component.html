@@ -1,24 +1,24 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
-    <h2 class="text-center">Add slides</h2>
+    <h2 class="text-center">Добавить слайд</h2>
   
     <div class="form-group">
-      <label for="title">Title</label>
+      <label for="title">Название</label>
       <input id="title" type="title" formControlName="title">
       <div *ngIf="form.get('title').touched && form.get('title').invalid" class="validation">
-        <small *ngIf="form.get('title').errors.required">Enter slider label</small>
+        <small *ngIf="form.get('title').errors.required">Название слайда</small>
       </div>
     </div>
     <div class="form-group">
-      <label for="photo">Photo</label>
+      <label for="photo">Изображение</label>
       <quill-editor formControlName="photo"></quill-editor>
     </div>
     <div class="form-group">
-      <label for="description">Description</label>
+      <label for="description">Описание</label>
       <input id="description" type="description" formControlName="description">
       <div *ngIf="form.get('description').touched && form.get('description').invalid" class="validation">
-        <small *ngIf="form.get('description').errors.required">Enter slider description</small>
+        <small *ngIf="form.get('description').errors.required">Введите описание слайдера</small>
       </div>
     </div>
   
-    <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submitted">Add slide</button>
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submitted">Добавить слайд</button>
   </form>

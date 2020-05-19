@@ -13,17 +13,14 @@
         <div class="contacts-form">
             <form [formGroup]="form" (ngSubmit)="submit()">
         
-                  <label for="name">Имя</label>
                   <input id="name" type="name" placeholder="Ваше ФИО" formControlName="name">
                   <div *ngIf="form.get('name').touched && form.get('name').invalid" class="validation">
                     <small *ngIf="form.get('name').errors.required">Введите ваше имя</small>
                   </div>
-                    <label for="phone">Ваш телефон</label>
                     <input id="phone" type="phone" placeholder="+38(099)555-96-69" formControlName="phone">
                     <div *ngIf="form.get('phone').touched && form.get('phone').invalid" class="validation">
                       <small *ngIf="form.get('phone').errors.required">Введите ваш телефон</small>
                     </div>
-                    <label for="email">Ваш Email</label>
                     <input id="email" type="email" placeholder="Ваш email" formControlName="email">
                     <div *ngIf="form.get('email').touched && form.get('email').invalid" class="validation">
                       <small *ngIf="form.get('email').errors.required">Введите ваш email</small>

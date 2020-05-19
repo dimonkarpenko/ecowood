@@ -1,5 +1,5 @@
 <div *ngIf="products.length; else loading">
-    <h2 class="text-center">Dashboard of products</h2>
+    <h2 class="text-center">Панель управление товарами</h2>
 
     <div class="form-group">
         <!-- <input type="text" placeholder="Find a product..." [(ngModel)]="productName"> -->
@@ -24,10 +24,10 @@
                 <td> {{ product.price }} </td>
                 <td> {{ product.date | date: 'short'}} </td>
                 <td>
-                    <button class="btn btn-dark" [routerLink]="['/admin', 'add-products', product.id, 'edit']" routerLinkActive="router-link-active" >Open</button>
+                    <button class="btn btn-dark" [routerLink]="['/admin', 'add-products', product.id, 'edit']" routerLinkActive="router-link-active" >Редактировать</button>
                 </td>
                 <td>
-                    <button class="btn btn-danger" (click)="remove(product.id)">Delete</button>
+                    <button class="btn btn-danger" (click)="remove(product.id)">Удалить</button>
                 </td>
             </tr>
         </tbody>

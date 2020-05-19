@@ -9,11 +9,11 @@
                     <ul *ngIf="auth.isAuth();else login">
                         <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'dashboard']" >Панель управления</a></li>
                         <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'orders']">Заказы</a></li>
-                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-slider']" >Slider</a></li>
-                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-services']">Add Services</a></li>
-                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-products']">Add Products</a></li>
-                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-article']">Add Article</a></li>
-                        <li> <a href="#" (click)="logout($event)">Logout</a></li>
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-slider']" >Слайдер</a></li>
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-services']">Сервисы</a></li>
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-products']">Продукты</a></li>
+                        <li routerLinkActive="active-link"> <a [routerLink]="['/admin', 'add-article']">Статьи</a></li>
+                        <li> <a href="#" (click)="logout($event)">Log out</a></li>
                     </ul>
             </div>
 
