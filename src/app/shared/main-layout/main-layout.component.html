@@ -20,37 +20,39 @@
                 <li>
                     <a [routerLink]="['/services']" routerLinkActive="active-link" >Сервисы</a>
                 </li>
-                <!-- <li>
-                    <a [routerLink]="['/blog']" routerLinkActive="active-link" >Blog</a>
-                </li> -->
+                <li>
+                    <a [routerLink]="['/blog']" routerLinkActive="active-link" >Блог</a>
+                </li>
                 <li>
                     <a [routerLink]="['/contacts']" routerLinkActive="active-link" >Контакты</a>
                 </li>
             </ul>
     </div>
     
-    <div class="menu_container_mobile" *ngIf="toggle">
-        <div class="hamburger_close_btn" (click)="toggleCards()">
-            <div class="hamburger_menu_close_btn"></div>
-            <div class="hamburger_menu_close_btn_sec"></div>
+    <div *ngIf="toggle">
+        <div class="menu_container_mobile">
+            <div class="hamburger_close_btn" (click)="toggleCards()">
+                <div class="hamburger_menu_close_btn"></div>
+                <div class="hamburger_menu_close_btn_sec"></div>
+            </div>
+                <ul>
+                    <li>
+                        <a [routerLink]="['/']" (click)="toggleCards()">Главная</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/products']" routerLinkActive="active-link" (click)="toggleCards()">Продукты</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/services']" routerLinkActive="active-link" (click)="toggleCards()">Сервисы</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/blog']" routerLinkActive="active-link" (click)="toggleCards()">Блог</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/contacts']" routerLinkActive="active-link" (click)="toggleCards()">Контакты</a>
+                    </li>
+                </ul>
         </div>
-            <ul>
-                <li>
-                    <a [routerLink]="['/']" >Главная</a>
-                </li>
-                <li>
-                    <a [routerLink]="['/products']" routerLinkActive="active-link" >Продукты</a>
-                </li>
-                <li>
-                    <a [routerLink]="['/services']" routerLinkActive="active-link" >Сервисы</a>
-                </li>
-                <!-- <li>
-                    <a [routerLink]="['/blog']" routerLinkActive="active-link" >Blog</a>
-                </li> -->
-                <li>
-                    <a [routerLink]="['/contacts']" routerLinkActive="active-link" >Контакты</a>
-                </li>
-            </ul>
     </div>
 </nav>
 

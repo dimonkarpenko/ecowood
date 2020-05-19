@@ -3,19 +3,27 @@
         <h1>Блог</h1>
     </div>
 
-    <div class="container bl" *ngIf="article$ | async as article">
-        <div class="blog-container-main" *ngFor="let articles of article">
-            <figure>
-                <quill-view-html [content]=articles.photo></quill-view-html>
-            </figure>
-            <h4>
-                {{articles.title}}
-            </h4>
-            <quill-view-html [content]="articles.descShort"></quill-view-html>
-            <button [routerLink]="['/blog', articles.id]" routerLinkActive="router-link-active"  class="btn btn-more">
-                Узнать больше
-            </button>
+    <div *ngIf="article$ | async as article; else loading">
+        <div class="article-container" *ngFor="let article of article">
+            <div class="article-container-img">
+                <figure>
+                    <quill-view-html [content]="article.photo"></quill-view-html>
+                </figure>
+            </div>
+            <div class="article-container-info">
+                <h1>
+                    {{article.title}}
+                </h1>
+                <quill-view-html [content]="article.info"></quill-view-html>
+                <button [routerLink]="['/blog', article.id]" routerLinkActive="router-link-active"  class="btn btn-more">
+                    Узнать больше
+                </button>
+            </div>
         </div>
     </div>
 
 </div>
+
+<ng-template #loading>
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 1)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"></ngx-spinner>
+</ng-template>

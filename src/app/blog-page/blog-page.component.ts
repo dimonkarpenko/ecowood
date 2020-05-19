@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../shared/blog.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-blog-page',
@@ -11,11 +12,13 @@ export class BlogPageComponent implements OnInit {
   article$
 
   constructor(
-    public blogServ: BlogService
+    public blogServ: BlogService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
-    this.article$ = this.blogServ.getAll()
+    this.spinner.show()
+    this.article$ = this.blogServ.getAllArticles()
   }
 
 }

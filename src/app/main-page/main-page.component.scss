@@ -60,6 +60,7 @@
 .prod-container-main {
     flex-wrap: wrap;
 	flex-basis: 25%;
+	padding-bottom: 30px;
 	
 	a {
 		color: #000;
@@ -70,7 +71,6 @@
 .contacts-info {
     display: flex;
     flex-direction: row;
-	margin-top: 30px;
 	width: 100%;
 
     figure {
@@ -90,6 +90,44 @@
         margin: 10px 0;
         width: 60%;
     }
+}
+
+.article {
+	background-color: #f7f7f7;
+
+	h1 {
+		width: 100%;
+		text-align: center;
+		padding: 35px;
+	}
+}
+
+.article-container {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.article-container-main {
+	flex-wrap: wrap;
+	flex-basis: 50%;
+	padding: 15px;
+
+	h4 {
+		color: #3a3a3a;
+		margin-top: 15px;
+		transition: .4s ease all;
+
+		&:hover {
+			color: #f0bc00;
+		}
+	}
+	
+	a {
+		color: #000;
+		text-decoration: none;
+	}
 }
 
 @media (min-width: 250px) and (max-width: 530px) {

@@ -1,7 +1,9 @@
-<ngx-spinner bdColor = "rgba(0, 0, 0, 1)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"></ngx-spinner>
+<ng-template #loading>
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 1)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"></ngx-spinner>
+</ng-template>
 
 <app-image-slider></app-image-slider>
-<div class="srv-container" *ngIf="servInfo$ | async as services">
+<div class="srv-container" *ngIf="servInfo$ | async as services; else loading">
     <div class="services-container" *ngFor="let services of services">
         <a [routerLink]="['/services', services.id]" routerLinkActive="router-link-active" >
             <figure>
@@ -22,11 +24,30 @@
             <h4>
                 {{products.title}}
             </h4>
-            <quill-view-html [content]="products.descShort"></quill-view-html>
-            <div>
-                <h5>{{products.price}} $</h5>
-            </div>
         </a>
+        <quill-view-html [content]="products.descShort"></quill-view-html>
+        <div>
+            <h5>{{products.price}} $</h5>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class="container article-container" *ngIf="article$ | async as article">
+        <h1>Смотрите советы и рекомендации в нашем блоге</h1>
+        <div class="article-container-main" *ngFor="let article of article">
+            <a [routerLink]="['/blog', article.id]" routerLinkActive="router-link" >
+                <figure>
+                    <quill-view-html [content]=article.photo></quill-view-html>
+                </figure>
+                <h4>
+                    {{article.title}}
+                </h4>
+            </a>
+            <div class="article-container-info">
+                <quill-view-html [content]="article.descShort"></quill-view-html>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -38,9 +59,6 @@
     <div class="contacts-form">
         <h2>Заказать продукцию</h2>
         <p>Заполните форму и мы вышлем вам наш прайс-лист</p>
-        <input type="text" placeholder="Ваше ФИО">
-        <input type="tel" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
-        <input type="email" placeholder="Ваш email">
-        <button class="btn btn-dark">Заказать</button>
+        <button class="btn btn-dark" [routerLink]="['/', 'contacts']" routerLinkActive="router-link-active" >Перейти к форме</button>
     </div>
 </div>

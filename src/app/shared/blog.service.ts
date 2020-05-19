@@ -22,7 +22,7 @@ export class BlogService {
     }))
   }
 
-  getAll() {
+  getAllArticles() {
     return this.http.get(`${environment.fbDbUrl}/articles.json`)
       .pipe(
         map( (res => {

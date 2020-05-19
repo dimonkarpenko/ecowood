@@ -21,7 +21,7 @@ const routes: Routes = [
       { path: 'services', component: ServicesComponent },
       { path: 'services/:id', component: ServicePageComponent },
       { path: 'blog', component: BlogPageComponent },
-      { path: 'articles/:id', component: ArticleComponent },
+      { path: 'blog/:id', component: ArticleComponent },
       { path: 'contacts', component: ContactsComponent},
     ]
   },

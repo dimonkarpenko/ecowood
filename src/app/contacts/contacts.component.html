@@ -1,3 +1,5 @@
+<<ngx-spinner bdColor = "rgba(0, 0, 0, 1)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"></ngx-spinner>
+
 <div class="contacts">
     <div class="banner">
         <h1>Контакты</h1>
@@ -9,12 +11,26 @@
         </figure>
 
         <div class="contacts-form">
-            <h2>Заказать продукцию</h2>
-            <p>Заполните форму и мы вышлем вам наш прайс-лист</p>
-            <input type="text" placeholder="Ваше ФИО">
-            <input type="tel" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
-            <input type="email" placeholder="Ваш email">
-            <button class="btn btn-dark">Заказать</button>
+            <form [formGroup]="form" (ngSubmit)="submit()">
+        
+                  <label for="name">Имя</label>
+                  <input id="name" type="name" placeholder="Ваше ФИО" formControlName="name">
+                  <div *ngIf="form.get('name').touched && form.get('name').invalid" class="validation">
+                    <small *ngIf="form.get('name').errors.required">Введите ваше имя</small>
+                  </div>
+                    <label for="phone">Ваш телефон</label>
+                    <input id="phone" type="phone" placeholder="+38(099)555-96-69" formControlName="phone">
+                    <div *ngIf="form.get('phone').touched && form.get('phone').invalid" class="validation">
+                      <small *ngIf="form.get('phone').errors.required">Введите ваш телефон</small>
+                    </div>
+                    <label for="email">Ваш Email</label>
+                    <input id="email" type="email" placeholder="Ваш email" formControlName="email">
+                    <div *ngIf="form.get('email').touched && form.get('email').invalid" class="validation">
+                      <small *ngIf="form.get('email').errors.required">Введите ваш email</small>
+                    </div>
+              
+                <button type="submit" class="btn btn-dark" [disabled]="form.invalid || submitted">Заказать</button>
+              </form>
         </div>
     </div>
 </div>

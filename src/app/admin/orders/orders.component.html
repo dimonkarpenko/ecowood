@@ -1,0 +1,37 @@
+<div *ngIf="orders.length; else loading">
+    <h2 class="text-center">Заказы</h2>
+
+    <div class="form-group">
+        <!-- <input type="text" placeholder="Find a product..." [(ngModel)]="productName"> -->
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ФИО</th>
+                <th>Номер телефона</th>
+                <th>Email</th>
+                <th>Дата создания</th>
+                <th>Удалить</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let order of orders; let idx = index">
+                <td> {{idx + 1}} </td>
+                <td> {{ order.name }} </td>
+                <td> {{ order.phone }} </td>
+                <td> {{ order.email }} </td>
+                <td> {{ order.date | date: 'short'}} </td>
+                <td>
+                    <button class="btn btn-danger" (click)="remove(order.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #loading>
+    <p class="text-center">Loading...</p>
+</ng-template>

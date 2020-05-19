@@ -18,10 +18,11 @@ export class ArticleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.article$ = this.route.paramMap
+    this.article$ = this.route.params
     .pipe( switchMap(params => {
       return this.blogServ.getById(params['id'])
     }))
   }
+  
 
 }

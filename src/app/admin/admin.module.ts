@@ -6,13 +6,13 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { AddServicesComponent } from './add-services/add-services.component';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { AddArticleComponent } from './add-article/add-article.component';
-import { AddContactInfoComponent } from './add-contact-info/add-contact-info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AuthGuard } from '../shared/auth.guard';
 import { QuillModule } from 'ngx-quill';
 import { SliderComponent } from './slider/slider.component'
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { OrdersComponent } from './orders/orders.component';
 
 
 @NgModule({
@@ -22,10 +22,10 @@ import { EditProductComponent } from './edit-product/edit-product.component';
         AddServicesComponent,
         AddProductsComponent,
         AddArticleComponent,
-        AddContactInfoComponent,
         DashboardComponent,
         SliderComponent,
-        EditProductComponent
+        EditProductComponent,
+        OrdersComponent
     ],
     imports: [
         QuillModule.forRoot(),
@@ -38,12 +38,12 @@ import { EditProductComponent } from './edit-product/edit-product.component';
                     { path: '', redirectTo: '/admin/login', pathMatch: 'full'},
                     { path: 'login', component: LoginPageComponent },
                     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+                    { path: 'orders', component: OrdersComponent, canActivate: [AuthGuard]},
                     { path: 'add-slider', component: SliderComponent, canActivate: [AuthGuard]},
                     { path: 'add-services', component: AddServicesComponent,canActivate: [AuthGuard] },
                     { path: 'add-products', component: AddProductsComponent, canActivate: [AuthGuard] },
                     { path: 'add-products/:id/edit', component: EditProductComponent, canActivate: [AuthGuard] },
-                    { path: 'add-article', component: AddArticleComponent, canActivate: [AuthGuard] },
-                    { path: 'add-contact-info', component: AddContactInfoComponent, canActivate: [AuthGuard] }
+                    { path: 'add-article', component: AddArticleComponent, canActivate: [AuthGuard] }
                 ]
             }
         ])

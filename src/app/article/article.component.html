@@ -1,25 +1,27 @@
-<div *ngIf="article$ | async as articles; else loading">
-    <h2>
-        {{articles.title}}
-    </h2>
+<div *ngIf="article$ | async as article; else loading">
+    <div class="article">
+        <div class="article-back-btn">
+            <button class="btn btn-dark" [routerLink]="['/blog']" routerLinkActive="router-link-active" >Back</button>
+        </div>
+        <div class="article-card container">
+            <div class="item">
+                <h2>
+                    {{article.title}}
+                </h2>
+            </div>
+            <div class="article-card-img">
+                <quill-view-html [content]="article.photo"></quill-view-html>
+            </div>
+
+            <div class="item">
+                <div>
+                    <quill-view-html [content]="article.info"></quill-view-html>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <ng-template #loading>
-    <div class="windows8">
-        <div class="wBall" id="wBall_1">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_2">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_3">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_4">
-            <div class="wInnerBall"></div>
-        </div>
-        <div class="wBall" id="wBall_5">
-            <div class="wInnerBall"></div>
-        </div>
-    </div>
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 1)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"></ngx-spinner>
 </ng-template>

@@ -251,6 +251,32 @@ table th {
   }
 }
 
+.article-container-info {
+  .ql-editor {
+    p {
+      font-size: 17px;
+      letter-spacing: 0.4px;
+      line-height: 1.4;
+      text-align: left;
+      color: #989797;
+      padding: 15px 0;
+      margin-bottom: 30px;
+  }
+}
+}
+
+  a {
+    figure {
+      .ql-editor {
+        img {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
 @media (min-width: 250px) and (max-width: 530px) {
 
   .serv-info {
@@ -265,6 +291,14 @@ table th {
     .ql-editor {
         p {
           text-align: center;
+      }
+    }
+  }
+
+  .article-container-info {
+    .ql-editor {
+        p {
+          margin-bottom: 0;
       }
     }
   }
@@ -289,6 +323,14 @@ table th {
     }
   }
 
+  .article-container-info {
+    .ql-editor {
+        p {
+          margin-bottom: 0;
+      }
+    }
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -305,6 +347,14 @@ table th {
     .ql-editor {
         p {
           text-align: center;
+      }
+    }
+  }
+
+  .article-container-info {
+    .ql-editor {
+        p {
+          margin-bottom: 0;
       }
     }
   }
@@ -327,6 +377,15 @@ table th {
       }
     }
   }
+
+  .article-container-info {
+    .ql-editor {
+        p {
+          margin-bottom: 0;
+      }
+    }
+  }
+
 }
 
 .carousel {

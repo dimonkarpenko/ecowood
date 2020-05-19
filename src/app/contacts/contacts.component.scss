@@ -17,9 +17,13 @@
     align-items: center;
     background-color: #008653;
 
+    form {
+        width: 50%;
+    }
+
     input {
         margin: 10px 0;
-        width: 60%;
+        width: 100%;
     }
 }
 
